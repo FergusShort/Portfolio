@@ -46,7 +46,7 @@ function Hero() {
           Computer Science Student
         </h2>
         <span>
-          <a href="https://x.com/Joemama10879720" target="_blank">
+          <a href="https://x.com" target="_blank">
             <img src={twitterIcon} alt="Twitter Icon" />
           </a>
           <a href="https://github.com/FergusShort" target="_blank">
