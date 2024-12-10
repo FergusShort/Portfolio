@@ -24,6 +24,9 @@ a:hover {
 h1{
   text-align: center;
 }
+h3,p{
+  text-align: center;
+}
 
 .projectsContainer {
   display: flex;
