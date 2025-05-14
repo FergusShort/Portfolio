@@ -5,7 +5,7 @@
 }
 
 .container img {
-  max-width: 250px;
+  max-width: 500px;
   align-self: center;
   background-color: var(--project-card-bg);
   border-radius: 20px;
@@ -21,10 +21,12 @@ a {
 a:hover {
   transform: scale(1.05);
 }
-h1{
+
+h1 {
   text-align: center;
 }
-h3,p{
+
+h3, p {
   text-align: center;
 }
 
@@ -35,13 +37,16 @@ h3,p{
   gap: 30px;
 }
 
-@media (width>= 800px){
-.projectsContainer{
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 0 30px;
-}
+@media (min-width: 800px) {
+  .projectsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 30px;
+  }
 
+  .projectsContainer > * {
+    flex-basis: 45%; /* Each project will take up 45% of the row */
+    max-width: 45%;  /* Prevents them from stretching too wide */
+  }
 }
-
