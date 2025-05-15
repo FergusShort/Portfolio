@@ -54,7 +54,7 @@ function Skills() {
   <SkillList src={checkmarkIcon} skill="User Stories" />
   <SkillList src={checkmarkIcon} skill="Prototyping" />
   <SkillList src={checkmarkIcon} skill="Linux" />
-  <SkillList src={checkmarkIcon} skill="Unix" />
+  <SkillList src={checkmarkIcon} skill="Ubuntu" />
   <SkillList src={checkmarkIcon} skill="Networking Protocols" />
 </div>
 <hr />
