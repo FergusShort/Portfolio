@@ -5,6 +5,7 @@ import birds2 from '../../assets/birds-2.png';
 import ANDIE from '../../assets/ANDIE.png';
 import ProjectCard from '../../common/ProjectCard';
 import favicon from '/favicon.ico';
+import COSC360 from '../../assets/COSC360.png';
 
 function Projects() {
   return (
@@ -34,6 +35,13 @@ function Projects() {
           link="https://github.com/FergusShort/ANDIE"
           h3="ANDIE (First Group Software Project)"
           p="A-NON-DESTRUCTIVE-IMAGE-EDITOR"
+        />
+
+          <ProjectCard 
+          src={COSC360} 
+          link="https://cosc360.otago.ac.nz/games/2025/EclipseOfDunedin"
+          h3="Video Game: Eclipse of Dunedin"
+          p="Created for COSC360"
         />
         <ProjectCard 
           src={favicon} 
