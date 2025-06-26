@@ -6,6 +6,7 @@ import ANDIE from '../../assets/ANDIE.png';
 import ProjectCard from '../../common/ProjectCard';
 import favicon from '/favicon.ico';
 import COSC360 from '../../assets/COSC360.png';
+import SharedSpace from '../../assets/SharedSpace.png';
 
 function Projects() {
   return (
@@ -42,6 +43,13 @@ function Projects() {
           link="https://cosc360.otago.ac.nz/games/2025/EclipseOfDunedin"
           h3="Video Game: Eclipse of Dunedin"
           p="Created for COSC360"
+        />
+
+          <ProjectCard 
+          src={SharedSpace} 
+          link="https://github.com/FergusShort/INFO310-SharedSpace/settings"
+          h3="Shared Space (Group Project)"
+          p="Flat Management System for INFO310"
         />
         <ProjectCard 
           src={favicon} 
