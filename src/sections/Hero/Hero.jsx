@@ -21,19 +21,11 @@ function Hero() {
     const linkedinIcon = theme === 'light' ? linkedinLight: linkedinDark;
   return (
     <section id="hero" className={styles.container}>
-      <div className={styles.colorModeContainer}>
-        <img
-          className={styles.hero}
-          src={heroImg}
-          alt="Profile Picture of Fergus Short "
-        />
-        <img
-          className={styles.colorMode}
-          src={themeIcon}
-          alter="Color Mode Icon"
-          onClick={toggleTheme}
-        />
-      </div>
+      <img
+        className={styles.hero}
+        src={heroImg}
+        alt="Profile Picture of Fergus Short "
+      />
       <div className={styles.info}>
         <h1>
           Fergus

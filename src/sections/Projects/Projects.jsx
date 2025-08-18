@@ -10,7 +10,7 @@ import SharedSpace from '../../assets/SharedSpace.png';
 
 function Projects() {
   return (
-    <section id="projects" className={styles.container}>
+    <section id="projects" className={styles.container} style={{paddingTop: '100px'}}>
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
         <ProjectCard 

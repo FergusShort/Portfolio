@@ -11,7 +11,7 @@ function Skills() {
 
 
   return (
-    <section id="skills" className={styles.container}>
+    <section id="skills" className={styles.container} style={{paddingTop: '100px'}}>
       <h1 className="sectionTitle"> Skills</h1>
       <div className={styles.skillList}>
   <SkillList src={checkmarkIcon} skill="HTML" />

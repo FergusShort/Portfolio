@@ -23,12 +23,13 @@
     display: flex;
     justify-content: center;
     margin: 0 auto 60px;
+    scroll-behavior: smooth;
   }
   
   #root {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 0;
   }
   
   h1,
