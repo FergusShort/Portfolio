@@ -1,5 +1,9 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
+import InteractiveBackground from "./components/InteractiveBackground/InteractiveBackground";
+import ScrollProgress from "./components/ScrollProgress/ScrollProgress";
+import FloatingElements from "./components/FloatingElements/FloatingElements";
 import Hero from "./sections/Hero/Hero";
 import About from "./sections/About/About";
 import Projects from "./sections/Projects/Projects";
@@ -11,7 +15,11 @@ import Footer from "./sections/Footer/Footer";
 function App() {
   return (
     <>
+      <InteractiveBackground />
+      <FloatingElements />
+      <ScrollProgress />
       <Navbar />
+      <MusicPlayer />
       <Hero />
       <About />
       <Projects />

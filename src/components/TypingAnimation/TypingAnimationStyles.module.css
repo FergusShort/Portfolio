@@ -1,0 +1,15 @@
+.typingText {
+  display: inline-block;
+  min-height: 1.2em;
+}
+
+.cursor {
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  color: #0987f2;
+  font-weight: bold;
+}
+
+.cursor.visible {
+  opacity: 1;
+}

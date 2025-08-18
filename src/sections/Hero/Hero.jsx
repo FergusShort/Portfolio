@@ -10,6 +10,7 @@ import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
 import CV from '../../assets/CV.pdf';
 import { useTheme } from '../../common/ThemeContext';
+import TypingAnimation from '../../components/TypingAnimation/TypingAnimation';
 
 function Hero() {
 
@@ -19,6 +20,15 @@ function Hero() {
     const twitterIcon = theme === 'light' ? twitterLight: twitterDark;
     const githubIcon = theme === 'light' ? githubLight: githubDark;
     const linkedinIcon = theme === 'light' ? linkedinLight: linkedinDark;
+
+  const typingTexts = [
+    "Software Engineering Student",
+    "Computer Science Student", 
+    "Full Stack Developer",
+    "Problem Solver",
+    "Creative Thinker"
+  ];
+
   return (
     <section id="hero" className={styles.container}>
       <img
@@ -33,9 +43,7 @@ function Hero() {
           Short
         </h1>
         <h2>
-          Software Engineering &
-          <br />
-          Computer Science Student
+          <TypingAnimation texts={typingTexts} />
         </h2>
         <span>
           <a href="https://x.com" target="_blank">

@@ -1,0 +1,36 @@
+.skillMeter {
+  margin-bottom: 20px;
+}
+
+.skillInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skillName {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.percentage {
+  font-weight: bold;
+  color: #0987f2;
+}
+
+.progressBar {
+  height: 8px;
+  background: rgba(9, 135, 242, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+[data-theme='dark'] .progressBar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #0987f2, #6c5ce7);
+  border-radius: 4px;
+}

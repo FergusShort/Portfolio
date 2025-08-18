@@ -25,6 +25,17 @@
         max-width: 26ch;
     }
 
+    .skillMeters {
+        max-width: 600px;
+        margin: 0 auto 40px;
+    }
+    
+    .skillMeters h3 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: var(--text-color);
+    }
+
     hr{
         width: 100px;
         height: 1px;
