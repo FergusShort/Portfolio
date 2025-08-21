@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
+import VisitorCounter from "./components/VisitorCounter/VisitorCounter";
 import InteractiveBackground from "./components/InteractiveBackground/InteractiveBackground";
 import ScrollProgress from "./components/ScrollProgress/ScrollProgress";
 import FloatingElements from "./components/FloatingElements/FloatingElements";
@@ -19,7 +19,7 @@ function App() {
       <FloatingElements />
       <ScrollProgress />
       <Navbar />
-      <MusicPlayer />
+      <VisitorCounter />
       <Hero />
       <About />
       <Projects />

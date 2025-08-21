@@ -124,13 +124,15 @@ function Navbar() {
           </li>
         </ul>
 
-        <button 
-          className={styles.themeToggle}
-          onClick={toggleTheme}
-          aria-label="Toggle theme"
-        >
-          <img src={themeIcon} alt="Theme toggle" />
-        </button>
+        <div className={styles.navbarControls}>
+          <button 
+            className={styles.themeToggle}
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            <img src={themeIcon} alt="Theme toggle" />
+          </button>
+        </div>
       </div>
     </nav>
   );

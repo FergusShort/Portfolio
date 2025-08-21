@@ -1,6 +1,35 @@
 import styles from './AboutStyles.module.css';
+import { useState, useEffect } from 'react';
+import ScrollableQuotes from '../../components/ScrollableQuotes/ScrollableQuotes';
 
 function About() {
+  const [stats, setStats] = useState({
+    yearsExperience: 0,
+    projectsCompleted: 0,
+    skillsLearned: 0
+  });
+
+  useEffect(() => {
+    // Calculate years since March 2023
+    const currentDate = new Date();
+    const startDate = new Date(2023, 2, 1); // March 1, 2023 (month is 0-indexed)
+    const diffTime = currentDate - startDate;
+    const diffYears = diffTime / (1000 * 60 * 60 * 24 * 365.25);
+    const yearsExperience = Math.floor(diffYears);
+    
+    // Count projects from Projects section (you have 7 projects currently)
+    const projectsCompleted = 7;
+    
+    // Count skills from Skills section (count all unique skills)
+    const skillsLearned = 30; // Based on your current skills list
+    
+    setStats({
+      yearsExperience,
+      projectsCompleted,
+      skillsLearned
+    });
+  }, []);
+
   return (
     <section id="about" className={styles.container}>
       <div className={styles.content}>
@@ -44,16 +73,16 @@ function About() {
             <h3>Quick Stats</h3>
             <div className={styles.stats}>
               <div className={styles.stat}>
-                <span className={styles.number}>3+</span>
-                <span className={styles.label}>Years Coding</span>
+                <span className={styles.number}>{stats.yearsExperience}+</span>
+                <span className={styles.label}>Years Experience</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.number}>15+</span>
+                <span className={styles.number}>{stats.projectsCompleted}+</span>
                 <span className={styles.label}>Projects Completed</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.number}>10+</span>
-                <span className={styles.label}>Technologies Learned</span>
+                <span className={styles.number}>{stats.skillsLearned}+</span>
+                <span className={styles.label}>Skills Learned</span>
               </div>
               <div className={styles.stat}>
                 <span className={styles.number}>∞</span>
@@ -63,13 +92,7 @@ function About() {
           </div>
         </div>
 
-        <div className={styles.philosophy}>
-          <blockquote>
-            "I believe that great software is built not just with code, but with 
-            empathy, creativity, and a genuine desire to make people's lives better 
-            through technology."
-          </blockquote>
-        </div>
+        <ScrollableQuotes />
       </div>
     </section>
   );

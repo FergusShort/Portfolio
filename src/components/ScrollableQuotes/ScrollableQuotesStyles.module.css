@@ -1,0 +1,143 @@
+.quotesContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.quoteArrow {
+  background: rgba(9, 135, 242, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+}
+
+.quoteArrow:hover {
+  background: rgba(9, 135, 242, 0.2);
+  transform: scale(1.1);
+}
+
+[data-theme='dark'] .quoteArrow {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .quoteArrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.quoteContent {
+  flex: 1;
+  text-align: center;
+  max-width: 600px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0 0 15px 0;
+  padding: 0;
+  background: rgba(9, 135, 242, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(9, 135, 242, 0.2);
+  padding: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .quote {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.quote::before {
+  content: '"';
+  font-size: 60px;
+  color: #0987f2;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-family: serif;
+}
+
+[data-theme='dark'] .quote::before {
+  color: #fff;
+}
+
+.author {
+  font-size: 14px;
+  color: var(--form-text-color);
+  font-family: 'Roboto Mono', monospace;
+  font-style: normal;
+}
+
+.quoteIndicators {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(9, 135, 242, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: #0987f2;
+  transform: scale(1.2);
+}
+
+[data-theme='dark'] .indicator {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme='dark'] .indicator.active {
+  background: #fff;
+}
+
+@media (min-width: 768px) {
+  .quote {
+    font-size: 20px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .quotesContainer {
+    gap: 10px;
+    padding: 15px;
+  }
+  
+  .quoteArrow {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .quote {
+    font-size: 16px;
+    padding: 20px;
+  }
+}

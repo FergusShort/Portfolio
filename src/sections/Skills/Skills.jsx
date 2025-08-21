@@ -2,7 +2,6 @@ import styles from "./SkillsStyles.module.css";
 import checkmarkLight from "../../assets/checkmark-light.svg";
 import checkmarkDark from "../../assets/checkmark-dark.svg";
 import SkillList from "./SkillList";
-import SkillMeter from "../../components/SkillMeter/SkillMeter";
 import { useTheme } from '../../common/ThemeContext';
 
 function Skills() {
@@ -10,34 +9,9 @@ function Skills() {
 
     const checkmarkIcon = theme === 'light' ? checkmarkLight: checkmarkDark;
 
-  const skillsWithLevels = [
-    { name: 'JavaScript', level: 90 },
-    { name: 'React', level: 85 },
-    { name: 'HTML/CSS', level: 95 },
-    { name: 'Java', level: 80 },
-    { name: 'Python', level: 75 },
-    { name: 'Node.js', level: 70 },
-    { name: 'Git', level: 85 },
-    { name: 'PostgreSQL', level: 65 }
-  ];
-
   return (
     <section id="skills" className={styles.container} style={{paddingTop: '100px'}}>
       <h1 className="sectionTitle"> Skills</h1>
-      
-      <div className={styles.skillMeters}>
-        <h3>Proficiency Levels</h3>
-        {skillsWithLevels.map((skill, index) => (
-          <SkillMeter 
-            key={skill.name}
-            skill={skill.name}
-            percentage={skill.level}
-            delay={index * 0.1}
-          />
-        ))}
-      </div>
-      
-      <hr />
       
       <div className={styles.skillList}>
   <SkillList src={checkmarkIcon} skill="HTML" />

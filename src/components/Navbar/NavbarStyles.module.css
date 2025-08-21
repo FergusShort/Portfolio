@@ -35,6 +35,12 @@
   padding: 1rem 2rem;
 }
 
+.navbarControls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .logo {
   font-family: 'Rubik', sans-serif;
   font-size: 24px;

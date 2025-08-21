@@ -1,0 +1,197 @@
+.projectRating {
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(9, 135, 242, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(9, 135, 242, 0.2);
+  text-align: center;
+}
+
+[data-theme='dark'] .projectRating {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ratingSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 14px;
+  color: var(--text-color);
+  font-family: 'Roboto Mono', monospace;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  color: #ddd;
+  transition: all 0.2s ease;
+}
+
+.star:hover:not(.disabled) {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.star.filled {
+  color: #ffd700;
+}
+
+.star.disabled {
+  cursor: not-allowed;
+}
+
+.averageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.averageStars {
+  display: flex;
+  gap: 1px;
+}
+
+.averageStar {
+  color: #ddd;
+}
+
+.averageStar.filled {
+  color: #ffd700;
+}
+
+.averageText {
+  font-size: 12px;
+  color: var(--form-text-color);
+  font-family: 'Roboto Mono', monospace;
+}
+
+.thanksMessage {
+  font-size: 12px;
+  color: #0987f2;
+  font-style: italic;
+  font-family: 'Roboto Mono', monospace;
+}
+
+[data-theme='dark'] .thanksMessage {
+  color: #fff;
+}
+
+.reviewInput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.reviewInput textarea {
+  width: 100%;
+  max-width: 250px;
+  height: 60px;
+  padding: 8px;
+  border: 1px solid rgba(9, 135, 242, 0.3);
+  border-radius: 8px;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  resize: none;
+}
+
+[data-theme='dark'] .reviewInput textarea {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.reviewInput textarea:focus {
+  outline: none;
+  border-color: #0987f2;
+}
+
+[data-theme='dark'] .reviewInput textarea:focus {
+  border-color: #fff;
+}
+
+.submitButton {
+  background: var(--btn-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-family: 'Roboto Mono', monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitButton:hover {
+  transform: scale(1.05);
+}
+
+.reviewsSection {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.reviewsSection h4 {
+  color: var(--text-color);
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.review {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+[data-theme='dark'] .review {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.reviewStars {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  margin-bottom: 5px;
+}
+
+.reviewStar {
+  color: #ddd;
+}
+
+.reviewStar.filled {
+  color: #ffd700;
+}
+
+.reviewText {
+  font-size: 12px;
+  color: var(--text-color);
+  margin: 5px 0;
+  font-style: italic;
+}
+
+.reviewDate {
+  font-size: 10px;
+  color: var(--form-text-color);
+  font-family: 'Roboto Mono', monospace;
+}
