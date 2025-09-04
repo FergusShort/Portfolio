@@ -1,4 +1,3 @@
-import ProjectRating from "../components/ProjectRating/ProjectRating";
 import PropTypes from "prop-types";
 
 function ProjectCard({ src, link, h3, p }) {
@@ -9,7 +8,6 @@ function ProjectCard({ src, link, h3, p }) {
         <h3>{h3}</h3>
         <p>{p}</p>
       </a>
-      <ProjectRating projectName={h3} />
     </div>
   );
 }
