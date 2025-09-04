@@ -15,7 +15,7 @@ function Gallery() {
     { id: 1, src: '/images/3leg.JPG', title: '3 Legged Race', description: 'My brother and I competing in the 3 legged race when we were younger', category: 'life' },
     { id: 2, src: '/images/660.jpeg', title: '660', description: 'My brother and I outside of a famous castle street flat that the band 660 are named after', category: 'life' },
     { id: 3, src: '/images/award.JPG', title: 'NCEA Top of Science Award', description: 'My parents and I after I had been awarded top of general science for Year 13 at my Highschool', category: 'life' },
-    { id: 4, src: '/images/ball.JPG', title: 'Bedroom Setup', description: 'My cozy bedroom setup', category: 'life' },
+    { id: 4, src: '/images/ball.JPG', title: 'Highschool Ball', description: 'Photo from before the ball my highschool had', category: 'life' },
     { id: 5, src: '/images/boogie.JPG', title: 'Boogie Boards', description: 'My siblings and cousin about to go boogie boarding', category: 'life' },
     { id: 6, src: '/images/brainstorm.JPG', title: 'Group Brainstorm', description: 'The work my group was doing during the 2025 AI Hackathon at Otago Uni', category: 'computing' },
     { id: 7, src: '/images/clan.JPG', title: 'Clan Munro', description: 'My cousins/siblings in our scottish attire', category: 'life' },
