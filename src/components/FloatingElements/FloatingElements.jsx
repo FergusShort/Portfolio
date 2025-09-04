@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
-import { Code, Palette, Zap, Heart, Star, Rocket } from 'lucide-react';
+import { Code, Palette,CircleDollarSign, Zap, BadgeCheck, Star, Rocket,Braces } from 'lucide-react';
 import styles from './FloatingElementsStyles.module.css';
 
 function FloatingElements() {
   const elements = [
     { Icon: Code, delay: 0, duration: 20 },
     { Icon: Palette, delay: 2, duration: 25 },
+    { Icon: CircleDollarSign, delay: 1, duration: 30 },
+    { Icon: Braces, delay: 3, duration: 28 },
     { Icon: Zap, delay: 4, duration: 18 },
-    { Icon: Heart, delay: 6, duration: 22 },
+    { Icon: BadgeCheck, delay: 6, duration: 22 },
     { Icon: Star, delay: 8, duration: 24 },
     { Icon: Rocket, delay: 10, duration: 19 }
   ];

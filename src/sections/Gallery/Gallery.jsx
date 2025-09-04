@@ -12,18 +12,30 @@ function Gallery() {
   const carouselTrackRef = useRef(null);
 
   const galleryImages = [
-    { id: 1, src: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800', title: 'Coding Setup', description: 'My development workspace', category: 'computing' },
-    { id: 2, src: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800', title: 'University Life', description: 'Campus at University of Otago', category: 'computing' },
-    { id: 3, src: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800', title: 'Team Collaboration', description: 'Working on group projects', category: 'computing' },
-    { id: 4, src: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800', title: 'Learning Journey', description: 'Continuous skill development', category: 'computing' },
-    { id: 5, src: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800', title: 'Innovation', description: 'Building the future with code', category: 'computing' },
-    { id: 6, src: 'https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&w=800', title: 'Problem Solving', description: 'Tackling complex challenges', category: 'computing' },
-    { id: 7, src: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800', title: 'Weekend Adventures', description: 'Exploring the outdoors', category: 'life' },
-    { id: 8, src: 'https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=800', title: 'Coffee & Contemplation', description: 'Daily moments of reflection', category: 'life' },
-    { id: 9, src: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=800', title: 'Travel Memories', description: 'Capturing beautiful moments', category: 'life' },
-    { id: 10, src: 'https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=800', title: 'Friends & Fun', description: 'Good times with great people', category: 'life' },
-    { id: 11, src: 'https://images.pexels.com/photos/1640775/pexels-photo-1640775.jpeg?auto=compress&cs=tinysrgb&w=800', title: 'Hobbies & Interests', description: 'Pursuing passions outside tech', category: 'life' },
-    { id: 12, src: 'https://images.pexels.com/photos/1640776/pexels-photo-1640776.jpeg?auto=compress&cs=tinysrgb&w=800', title: 'Life Balance', description: 'Finding harmony in daily life', category: 'life' }
+    { id: 1, src: '/images/3leg.JPG', title: '3 Legged Race', description: 'My brother and I competing in the 3 legged race when we were younger', category: 'life' },
+    { id: 2, src: '/images/660.jpeg', title: '660', description: 'My brother and I outside of a famous castle street flat that the band 660 are named after', category: 'life' },
+    { id: 3, src: '/images/award.JPG', title: 'NCEA Top of Science Award', description: 'My parents and I after I had been awarded top of general science for Year 13 at my Highschool', category: 'life' },
+    { id: 4, src: '/images/ball.JPG', title: 'Bedroom Setup', description: 'My cozy bedroom setup', category: 'life' },
+    { id: 5, src: '/images/boogie.JPG', title: 'Boogie Boards', description: 'My siblings and cousin about to go boogie boarding', category: 'life' },
+    { id: 6, src: '/images/brainstorm.JPG', title: 'Group Brainstorm', description: 'The work my group was doing during the 2025 AI Hackathon at Otago Uni', category: 'computing' },
+    { id: 7, src: '/images/clan.JPG', title: 'Clan Munro', description: 'My cousins/siblings in our scottish attire', category: 'life' },
+    { id: 8, src: '/images/cray.JPG', title: 'Crayfish!', description: 'A Crayfish I had caught from a craypot', category: 'life' },
+    { id: 9, src: '/images/dame.jpeg', title: 'Governor General', description: 'Meeting the Governor General Dame Cindy Kiro after my father received a medal from her', category: 'life' },
+    { id: 10, src: '/images/drums.jpg', title: 'Old Drumset', description: 'My old drumset from when I used to play', category: 'life' },
+    { id: 11, src: '/images/firstday.JPG', title: 'First Day of Highscholl', description: 'A photo with my mum before my first day of highschool', category: 'life' },
+    { id: 12, src: '/images/fishing.JPG', title: 'Snapper!', description: 'Snapper I caught fishing with my grandfather', category: 'life' },
+    { id: 13, src: '/images/group.JPG', title: 'My groups presentation at 2025 AI Hackathon', description: 'My group during our preentation', category: 'life' },
+    { id: 14, src: '/images/lake.JPG', title: 'Naseby Dam', description: 'My siblings and cousins at the Naseby Dam', category: 'life' },
+    { id: 15, src: '/images/monkey.JPG', title: 'Bali Monkey', description: 'Whilst in Bali I got to have an encounter with this monkey', category: 'life' },
+    { id: 16, src: '/images/muay.JPG', title: 'Muay Thai', description: 'Whilst in Thailand I got to train in Muay Thai, here I am sparring my brother', category: 'life' },
+    { id: 17, src: '/images/mum.JPG', title: 'My Brother and Mum', description: 'Whilst at a 21st celebration my mother and brother took this photo with me', category: 'life' },
+    { id: 18, src: '/images/ocss.JPG', title: 'OCSS', description: 'A photo of the Otago Computer Science Society members that took place in the 2025 AI Hackathon', category: 'computing' },
+    { id: 19, src: '/images/robot.JPG', title: 'AI Robot', description: 'A Robot a group I was in coded to follow this black line', category: 'computing' },
+    { id: 20, src: '/images/row.JPG', title: 'Rowing Double', description: 'An image from when I used to row', category: 'life' },
+    { id: 21, src: '/images/Rugby.JPG', title: 'Rugby', description: 'Myself and a good mate making a run during a rugby game', category: 'life' },
+    { id: 22, src: '/images/skiing.JPG', title: 'Skiing', description: 'My mates and I on a skiing trip', category: 'life' },
+    { id: 23, src: '/images/speech.JPG', title: 'Hackathon Speech', description: 'Me speaking during the 2025 AI Hackathon', category: 'computing' },
+    { id: 24, src: '/images/wests.JPG', title: 'West Roosters', description: 'My childhood rugby club', category: 'life' }
   ];
 
   const imagesPerRow = 3;

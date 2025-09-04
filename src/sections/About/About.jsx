@@ -38,9 +38,9 @@ function About() {
         <div className={styles.aboutGrid}>
           <div className={styles.textContent}>
             <div className={styles.intro}>
-              <h3>Hello! I'm Fergus Short</h3>
+              <h3>Hello! I&apos;m Fergus Short</h3>
               <p>
-                I'm a passionate Computer Science student at the University of Otago, 
+                I&apos; m a passionate Computer Science student at the University of Otago, 
                 currently pursuing my Bachelor of Science degree. My journey in technology 
                 began with curiosity and has evolved into a deep love for creating 
                 innovative solutions through code.
@@ -51,7 +51,7 @@ function About() {
               <h3>My Journey</h3>
               <p>
                 From building my first website about birds to developing complex 
-                software applications, I've been constantly pushing myself to learn 
+                software applications, I&apos;ve been constantly pushing myself to learn 
                 and grow. I thrive on challenges and enjoy working both independently 
                 and as part of a team to bring ideas to life.
               </p>
