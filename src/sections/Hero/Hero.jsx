@@ -1,7 +1,5 @@
 import styles from "./HeroStyles.module.css";
 import heroImg from "../../assets/hero-img.png";
-import sun from "../../assets/sun.svg";
-import moon from '../../assets/moon.svg';
 import twitterLight from "../../assets/twitter-light.svg";
 import twitterDark from "../../assets/twitter-dark.svg";
 import githubLight from "../../assets/github-light.svg";
@@ -14,9 +12,8 @@ import TypingAnimation from '../../components/TypingAnimation/TypingAnimation';
 
 function Hero() {
 
-    const { theme, toggleTheme } = useTheme();
+    const { theme } = useTheme();
 
-    const themeIcon = theme === 'light' ? sun: moon;
     const twitterIcon = theme === 'light' ? twitterLight: twitterDark;
     const githubIcon = theme === 'light' ? githubLight: githubDark;
     const linkedinIcon = theme === 'light' ? linkedinLight: linkedinDark;
