@@ -51,11 +51,10 @@
   line-height: 1.6;
   color: var(--text-color);
   margin: 0 0 15px 0;
-  padding: 0;
+  padding: 30px;
   background: rgba(9, 135, 242, 0.05);
   border-radius: 20px;
   border: 1px solid rgba(9, 135, 242, 0.2);
-  padding: 30px;
   position: relative;
   transition: all 0.3s ease;
 }
@@ -63,16 +62,6 @@
 [data-theme='dark'] .quote {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.quote::before {
-  content: '"';
-  font-size: 60px;
-  color: #0987f2;
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  font-family: serif;
 }
 
 [data-theme='dark'] .quote::before {
@@ -125,19 +114,33 @@
   }
 }
 
+/* Mobile adjustments for common iPhones including X, Pro, and Plus models */
 @media (max-width: 767px) {
   .quotesContainer {
-    gap: 10px;
-    padding: 15px;
+    gap: 12px; /* larger for touch comfort */
+    padding: 15px 10px; /* horizontal padding for small screens */
   }
   
   .quoteArrow {
-    width: 35px;
-    height: 35px;
+    width: 40px;  
+    height: 40px;
   }
   
   .quote {
     font-size: 16px;
     padding: 20px;
+  }
+
+  .author {
+    font-size: 13px;
+  }
+
+  .quoteIndicators {
+    gap: 6px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
   }
 }

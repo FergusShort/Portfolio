@@ -8,6 +8,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  align-items: center;
 }
 
 textarea,
@@ -15,6 +16,7 @@ input:not([type="submit"]) {
   height: 50px;
   padding-left: 16px;
   width: 250px;
+  font-size: 16px;
 }
 
 textarea {
@@ -28,7 +30,6 @@ textarea {
   border-radius: 20px;
   border: #888 1px solid;
   box-sizing: border-box;
-  justify-self: center;
   background-color: var(--background-color);
   color: var(--form-text-color);
 }
@@ -49,31 +50,35 @@ input[type="submit"] {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
   margin: auto;
+  cursor: pointer;
 }
 
-input[type='submit']:hover{
-    transform: scale(1.05);
+input[type="submit"]:hover {
+  transform: scale(1.05);
 }
 
-input[type=]:active{
-    transform: translateY(2px);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+input[type="submit"]:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-@media (width>= 800px){
-  textarea, input:not([type="submit"]){
+/* Responsive for tablets / small laptops */
+@media (min-width: 800px) {
+  textarea,
+  input:not([type="submit"]) {
     width: 600px;
+    font-size: 18px;
+  }
+  form {
+    gap: 40px;
+  }
+}
+
+/* Responsive for large desktops */
+@media (min-width: 1400px) {
+  textarea,
+  input:not([type="submit"]) {
+    width: 800px;
     font-size: 20px;
   }
-    form{
-      gap: 40px;
-    }
-  }
-
-  @media (width>= 1400px){
-    textarea, input:not([type="submit"]){
-      width: 800px
-    }
-  }
-    
-  
+}

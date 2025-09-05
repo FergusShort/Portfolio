@@ -1,106 +1,106 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+/* Desktop-first styles */
+.container {
+  display: flex;
+  flex-direction: row-reverse; /* image on right */
+  align-items: center;
+  justify-content: center; /* center the content horizontally */
+  gap: 60px; /* space between image and text */
+  text-align: left; /* left-align text on desktop */
+  height: 100dvh;
+  min-height: 500px;
+  padding-top: 80px;
+}
+
+.hero {
+  max-width: 350px;
+  width: 350px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center
+}
+
+.span {
+  display: flex;
+  gap: 25px;
+}
+
+.span a img {
+  width: 30px;
+}
+
+.description {
+  max-width: 24ch;
+}
+
+a {
+  width: fit-content;
+}
+
+button {
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 20px;
+  width: 126px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.colorModeContainer {
+  position: relative;
+}
+
+.colorMode {
+  position: absolute;
+  right: 0;
+  width: 25px;
+}
+
+.colorMode:hover {
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 799px) {
+  .container {
+    flex-direction: column; /* image on top */
     text-align: center;
-    height: 100dvh;
-    min-height: 500px;
-    padding-top: 80px;
-
-    .hero{
-        max-width: 200px;
-
-    }
-    .span{
-        display: flex;
-        gap: 25px;
-        justify-content: center;
-
-        a{
-            margin: 0;
-
-            img{
-                width: 30px;
-            }
-
-        }
-    }
-    a{
-        width: fit-content;
-        align-self: center;
-    }
-
-    button{
-        background-color: var(--btn-color);
-        color: var(--btn-text-color);
-        border: none;
-        border-radius: 20px;
-        width: 126px;
-        height: 50px;
-        font-size: 20px;
-        font-weight: bold;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-
-    }
-
-    button:hover{
-        transform:scale(1.05);
-    }
-
-    button:active{
-        transform: translateY(2px);
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-    }
-}
-
-.colorModeContainer{
-    position: relative;
-}
-
-.colorMode{
-    position: absolute;
-    right: 0;
-    width: 25px;
-}
-
-.colorMode:hover{
-    cursor: pointer;
-}
-
-.description{
-    max-width: 24ch;
-}
-.info{
-    display: flex;
-    flex-direction: column;
     gap: 20px;
+  }
+
+  .hero {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .info {
+    align-items: center; /* center text on mobile */
+  }
+
+  .span {
+    justify-content: center;
+  }
 }
 
-@media (width >= 800px) {
-.container{
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-evenly;
-
-.hero{
-    max-width: 350px;
-    width: 350px;
-
+@media (min-width: 1400px) {
+  .hero {
+    max-width: 400px;
+    width: 400px;
+  }
 }
-}
-
-}
-
-
-@media (width >= 1400px) {
-    .container{  
-    .hero{
-        max-width: 400px;
-        width: 400px;
-    
-    }
-    }
-    
-    }

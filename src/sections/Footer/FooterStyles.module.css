@@ -1,7 +1,9 @@
 .container{
     text-align: center;
+    margin-top: 30px;
     p{
         font-size: 16px;
         color: var(--footer-text-color);
     }
+
 }

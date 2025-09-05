@@ -2,10 +2,13 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 20px; /* small padding on mobile */
 }
 
 .container img {
-  max-width: 500px;
+  max-width: 100%;
+  width: 100%;       /* make images responsive on mobile */
+  max-width: 500px;  /* limit on larger screens */
   align-self: center;
   background-color: var(--project-card-bg);
   border-radius: 20px;
@@ -24,19 +27,25 @@ a:hover {
 
 h1 {
   text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 h3, p {
   text-align: center;
+  margin: 5px 0;
 }
 
+/* Projects container for mobile */
 .projectsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  padding: 0 10px;
 }
 
+/* Larger screens: row layout */
 @media (min-width: 800px) {
   .projectsContainer {
     flex-direction: row;
@@ -48,5 +57,13 @@ h3, p {
   .projectsContainer > * {
     flex-basis: 45%; /* Each project will take up 45% of the row */
     max-width: 45%;  /* Prevents them from stretching too wide */
+  }
+}
+
+/* Extra-large screens */
+@media (min-width: 1400px) {
+  .projectsContainer > * {
+    flex-basis: 40%;
+    max-width: 40%;
   }
 }

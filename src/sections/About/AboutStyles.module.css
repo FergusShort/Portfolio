@@ -24,8 +24,9 @@
 }
 
 .intro,
-.journey,
-.interests {
+.education,
+.interests,
+.proudlyBacking {
   background: rgba(9, 135, 242, 0.05);
   padding: 30px;
   border-radius: 20px;
@@ -33,30 +34,53 @@
 }
 
 [data-theme='dark'] .intro,
-[data-theme='dark'] .journey,
-[data-theme='dark'] .interests {
+[data-theme='dark'] .education,
+[data-theme='dark'] .interests,
+[data-theme='dark'] .proudlyBacking {
   background: rgba(255, 255, 255, 0.05);
   border-left: 4px solid #fff;
 }
 
 .intro h3,
-.journey h3,
-.interests h3 {
+.education h3,
+.interests h3,
+.proudlyBacking h3 {
   margin-bottom: 15px;
   color: #0987f2;
   font-size: 20px;
 }
 
 [data-theme='dark'] .intro h3,
-[data-theme='dark'] .journey h3,
-[data-theme='dark'] .interests h3 {
+[data-theme='dark'] .education h3,
+[data-theme='dark'] .interests h3,
+[data-theme='dark'] .proudlyBacking h3 {
   color: #fff;
 }
 
-.intro p,
-.journey p {
+.intro p {
   line-height: 1.6;
   margin-bottom: 0;
+}
+
+/* Education Logos */
+.education .logos {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.education .logos a img {
+  width: 100px;  /* all logos same width */
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.5);
+}
+
+.education .logos a img:hover {
+  transform: scale(1.55);
 }
 
 .interests ul {
@@ -134,18 +158,24 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.philosophy blockquote::before {
-  content: '"';
-  font-size: 60px;
-  color: #0987f2;
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  font-family: serif;
+/* Proudly Backing Logos */
+.proudlyBacking .logos {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-[data-theme='dark'] .philosophy blockquote::before {
-  color: #fff;
+.proudlyBacking .logos a img {
+  width: 80px;  /* all logos same width */
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+.proudlyBacking .logos a img:hover {
+  transform: scale(1.05);
 }
 
 @media (min-width: 768px) {
