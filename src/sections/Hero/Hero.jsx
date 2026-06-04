@@ -19,11 +19,12 @@ function Hero() {
     const linkedinIcon = theme === 'light' ? linkedinLight: linkedinDark;
 
   const typingTexts = [
-    "Software Engineering Student",
-    "Computer Science Student", 
+    "Software Engineering Graduate",
+    "Computer Science Gradute", 
     "Full Stack Developer",
     "Problem Solver",
-    "Creative Thinker"
+    "Creative Thinker",
+    "Video Game Developer",
   ];
 
   return (

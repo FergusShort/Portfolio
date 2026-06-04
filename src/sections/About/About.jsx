@@ -36,7 +36,7 @@ function About() {
             <div className={styles.intro}>
               <h3>Hello! I&apos;m Fergus Short</h3>
               <p>
-                I&apos;m a passionate Computer Science & Software Engineering student at Otago University, 
+                I&apos;m a passionate Computer Science & Software Engineering Graduate from Otago University, 
                 I enjoy learning anything I can about technology and software development. In my free time,
                 I like watching basketball, spending time with friends and family, and trying new foods.
               </p>

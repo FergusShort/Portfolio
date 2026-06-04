@@ -20,6 +20,7 @@ function Skills() {
   <SkillList src={checkmarkIcon} skill="React" />
   <SkillList src={checkmarkIcon} skill="JavaScript" />
   <SkillList src={checkmarkIcon} skill="TypeScript" />
+  <SkillList src={checkmarkIcon} skill="Lua" />
 </div>
 <hr />
 <div className={styles.skillList}>
