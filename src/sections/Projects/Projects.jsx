@@ -7,6 +7,8 @@ import ProjectCard from '../../common/ProjectCard';
 import favicon from '/favicon.ico';
 import COSC360 from '../../assets/COSC360.png';
 import SharedSpace from '../../assets/SharedSpace.png';
+import Simmer from '../../assets/Simmer.png';
+import TaskRoulette from '../../assets/TaskRoulette.png';
 
 function Projects() {
   return (
@@ -17,19 +19,19 @@ function Projects() {
           src={TheBus} 
           link="https://github.com/FergusShort/THE-BUS"
           h3="The Bus"
-          p="Drinking Card Game"
+          p="Party Card Game designed for students"
         />
         <ProjectCard 
-          src={birds1} 
-          link="https://github.com/FergusShort/Birds-Website-1"
-          h3="Birds Website 1 (University Project)"
-          p="First Ever Website I Made"
+          src={Simmer} 
+          link="https://github.com/FergusShort/simmer"
+          h3="Simmer"
+          p="A personal MacOS App That organises recipes and generates shopping lists"
         />
         <ProjectCard 
-          src={birds2} 
-          link="https://github.com/FergusShort/Birds-Website-2"
-          h3="Birds Website 2 (University Project)"
-          p="Second Website I Made"
+          src={TaskRoulette} 
+          link="https://github.com/FergusShort/FocusRoulette"
+          h3="Task Roulette"
+          p="A fun app that randomly selects a task from a list to help you decide what to work on"
         />
         <ProjectCard 
           src={ANDIE} 
@@ -50,6 +52,18 @@ function Projects() {
           link="https://github.com/FergusShort/INFO310-SharedSpace/settings"
           h3="Shared Space (Group Project)"
           p="Flat Management System for INFO310"
+        />
+        <ProjectCard 
+          src={birds1} 
+          link="https://github.com/FergusShort/Birds-Website-1"
+          h3="Birds Website 1 (University Project)"
+          p="First Ever Website I Made"
+        />
+        <ProjectCard 
+          src={birds2} 
+          link="https://github.com/FergusShort/Birds-Website-2"
+          h3="Birds Website 2 (University Project)"
+          p="Second Website I Made"
         />
         <ProjectCard 
           src={favicon} 
