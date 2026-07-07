@@ -6,7 +6,7 @@ function Contact() {
     <section id="contact" className={styles.container} style={{paddingTop: '100px'}}>
       <h1 className="sectionTitle">Contact</h1>
       <form action="https://formspree.io/f/xpwzbokg" method="post">
-        <div className="formGroup">
+        <div className={styles.formGroup}>
           <label htmlFor="name" hidden>
             Name
           </label>
@@ -18,7 +18,7 @@ function Contact() {
           required
            />
         </div>
-        <div className="formGroup">
+        <div className={styles.formGroup}>
           <label htmlFor="email" hidden>
             Email
           </label>
@@ -30,7 +30,7 @@ function Contact() {
           required
            />
         </div>
-        <div className="formGroup">
+        <div className={styles.formGroup}>
           <label htmlFor="message" hidden>
             Message
           </label>
@@ -38,7 +38,8 @@ function Contact() {
           name="message" 
           id="message"
           placeholder="Message"
-          required> </textarea>
+          required
+           />
            
         </div>
         <input className="hover btn" type="submit" value="Submit"/>
