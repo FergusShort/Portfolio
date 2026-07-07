@@ -3,6 +3,7 @@ import { Code, Palette,CircleDollarSign, Zap, BadgeCheck, Star, Rocket,Braces } 
 import styles from './FloatingElementsStyles.module.css';
 
 function FloatingElements() {
+  const horizontalPositions = [8, 20, 32, 44, 56, 68, 80, 92];
   const elements = [
     { Icon: Code, delay: 0, duration: 20 },
     { Icon: Palette, delay: 2, duration: 25 },
@@ -34,7 +35,7 @@ function FloatingElements() {
             ease: 'linear'
           }}
           style={{
-            left: `${10 + index * 15}%`,
+            left: `${horizontalPositions[index]}%`,
           }}
         >
           <Icon size={24} />

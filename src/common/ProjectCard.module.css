@@ -1,0 +1,220 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(34, 34, 34, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.card:hover {
+  border-color: rgba(9, 135, 242, 0.28);
+  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.16);
+  transform: translateY(-4px);
+}
+
+[data-theme='dark'] .card {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.25);
+}
+
+.imageShell {
+  position: relative;
+  display: flex;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(9, 135, 242, 0.18), transparent 32%),
+    linear-gradient(135deg, rgba(9, 135, 242, 0.1), rgba(34, 34, 34, 0.04));
+}
+
+[data-theme='dark'] .imageShell {
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.16), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.22));
+}
+
+.imageLink {
+  display: flex;
+  width: 100%;
+  color: inherit;
+}
+
+.image {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  object-fit: contain;
+  transition: transform 220ms ease;
+}
+
+.card:hover .image {
+  transform: scale(1.025);
+}
+
+.imageFallback {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  padding: 24px;
+  color: var(--form-text-color);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  background: rgba(34, 34, 34, 0.58);
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.carouselButton:hover {
+  background: rgba(9, 135, 242, 0.92);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.carouselButton:focus-visible,
+.dot:focus-visible,
+.projectLink:focus-visible {
+  outline: 3px solid rgba(9, 135, 242, 0.35);
+  outline-offset: 3px;
+}
+
+.previousButton {
+  left: 12px;
+}
+
+.nextButton {
+  right: 12px;
+}
+
+.imageCounter {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  border-radius: 999px;
+  background: rgba(34, 34, 34, 0.68);
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  line-height: 1;
+  padding: 7px 9px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  padding: 13px 16px 0;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(34, 34, 34, 0.22);
+  cursor: pointer;
+  padding: 0;
+  transition:
+    background 160ms ease,
+    width 160ms ease;
+}
+
+[data-theme='dark'] .dot {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.activeDot {
+  width: 22px;
+  background: #0987f2;
+}
+
+[data-theme='dark'] .activeDot {
+  background: #fff;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  text-align: left;
+}
+
+.content h3 {
+  color: var(--text-color);
+  font-size: 20px;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.content p {
+  flex: 1;
+  color: var(--form-text-color);
+  font-size: 15px;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  width: fit-content;
+  border-radius: 6px;
+  background: var(--btn-color);
+  color: var(--btn-text-color);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 10px 12px;
+  text-decoration: none;
+  transition:
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.projectLink:hover {
+  box-shadow: 0 10px 22px rgba(9, 135, 242, 0.25);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 520px) {
+  .content {
+    padding: 16px;
+  }
+
+  .content h3 {
+    font-size: 18px;
+  }
+
+  .carouselButton {
+    width: 32px;
+    height: 32px;
+  }
+}

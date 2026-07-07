@@ -20,7 +20,7 @@ function Hero() {
 
   const typingTexts = [
     "Software Engineering Graduate",
-    "Computer Science Gradute", 
+    "Computer Science Graduate",
     "Full Stack Developer",
     "Problem Solver",
     "Creative Thinker",
@@ -35,11 +35,7 @@ function Hero() {
         alt="Profile Picture of Fergus Short "
       />
       <div className={styles.info}>
-        <h1>
-          Fergus
-          <br />
-          Short
-        </h1>
+        <h1>Fergus Short</h1>
         <h2>
           <TypingAnimation texts={typingTexts} />
         </h2>

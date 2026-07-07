@@ -1,69 +1,25 @@
 .container {
-  display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
+  width: min(1120px, calc(100vw - 40px));
+  margin: 0 auto;
+  padding: 100px 0 60px;
   text-align: center;
-  padding: 20px; /* small padding on mobile */
 }
 
-.container img {
-  max-width: 100%;
-  width: 100%;       /* make images responsive on mobile */
-  max-width: 500px;  /* limit on larger screens */
-  align-self: center;
-  background-color: var(--project-card-bg);
-  border-radius: 20px;
-}
-
-a {
-  width: fit-content;
-  text-decoration: none;
-  color: #222;
-  transition: transform 200ms ease-in-out;
-}
-
-a:hover {
-  transform: scale(1.05);
-}
-
-h1 {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-h3, p {
-  text-align: center;
-  margin: 5px 0;
-}
-
-/* Projects container for mobile */
 .projectsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  padding: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 24px;
+  align-items: stretch;
 }
 
-/* Larger screens: row layout */
-@media (min-width: 800px) {
+@media (min-width: 900px) {
+  .container {
+    width: min(1120px, calc(100vw - 64px));
+  }
+
   .projectsContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0 30px;
-  }
-
-  .projectsContainer > * {
-    flex-basis: 45%; /* Each project will take up 45% of the row */
-    max-width: 45%;  /* Prevents them from stretching too wide */
-  }
-}
-
-/* Extra-large screens */
-@media (min-width: 1400px) {
-  .projectsContainer > * {
-    flex-basis: 40%;
-    max-width: 40%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
   }
 }
