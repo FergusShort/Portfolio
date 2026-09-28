@@ -4,7 +4,7 @@ Welcome to my personal portfolio! This site is a showcase of my skills, projects
 
 ## **Features**
 - **Dark/Light Mode** – Switch seamlessly between dark and light modes for a personalized viewing experience.
-- **Responsive Design** – Optimized for all screen sizes, from desktop to mobile.
+- **Responsive Design** – Optimized for all screen sizes, from desktop to mobile
 - **Resume Download** – Easily download my up-to-date resume with a single click.
 - **Contact Me** – Get in touch directly via email for inquiries or collaborations.
 
