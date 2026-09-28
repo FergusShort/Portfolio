@@ -16,6 +16,8 @@ import Simmer from '../../assets/Simmer.png';
 import Simmer2 from '../../assets/Simmer2.png';
 import Simmer3 from '../../assets/Simmer3.png';
 import TaskRoulette from '../../assets/TaskRoulette.png';
+import Quizme1 from '../../assets/Quizme1.png';
+import Quizme2 from '../../assets/Quizme2.png';
 
 function Projects() {
   const projects = [
@@ -54,6 +56,12 @@ function Projects() {
       link: "https://github.com/FergusShort/INFO310-SharedSpace/settings",
       h3: "Shared Space",
       p: "A flat management system created as an INFO310 group project",
+    },
+        {
+      images: [Quizme1, Quizme2],
+      link: "https://github.com/FergusShort/Quizme",
+      h3: "Quizme",
+      p: "A simple quiz app created so I can test my knowledge of different topics",
     },
     {
       images: [birds1],
